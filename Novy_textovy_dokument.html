@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологии беспроводной связи - 5G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121; /* Серый фон */
+            color: #e0e0e0; /* Светлый цвет текста */
+        }
+
+        header {
+            background: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif; /* Шрифт заголовка */
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            display: inline-block;
+            width: 170px; /* Ширина кнопки */
+            height: 50px; /* Высота кнопки */
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif; /* Шрифт кнопок */
+            background-color: #2d3436; /* Темный фон кнопки */
+            color: #ffffff; /* Светлый цвет текста */
+            text-align: center;
+            line-height: 50px; /* Центрирование текста по вертикали */
+            margin: 0 10px; /* Отступы между кнопками */
+            position: relative; /* Для абсолютного позиционирования псевдоэлемента */
+            cursor: pointer;
+            box-shadow: 5px 5px 0 0; /* Тень */
+            transition: 0.3s; /* Плавный переход */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 170px;
+            height: 50px;
+            background: linear-gradient(to right, #ff7675, #e84393);
+            opacity: 0; /* Скрываем градиент */
+            transition: 0.3s; /* Плавный переход */
+            border-radius: 5px; /* Закругленные углы */
+        }
+
+        .nav-link:hover {
+            box-shadow: -5px -5px 0 0; /* Изменяем тень при наведении */
+            transform: scale(0.9); /* Легкое уменьшение кнопки */
+        }
+
+        .nav-link:hover::after {
+            opacity: 1; /* Появление градиента при наведении */
+        }
+
+        section {
+            padding: 40px;
+            background-color: #37474f; /* Темно-синий цвет для секций */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #00acc1; /* Цвет заголовка */
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif; /* Шрифт заголовков */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0; /* Цвет текста для читаемости */
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #e0e0e0; /* Цвет списка для читаемости */
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Стили для секции сотрудников */
+        .employee-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .employee-card {
+            background-color: #455a64;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .employee-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #00acc1; /* Цвет рамки фото */
+        }
+
+        	
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Технологии беспроводной связи: 5G</h1>
+</header>
+
+<nav>
+    <a href="#home" class="nav-link">Главная</a>
+    <a href="#about" class="nav-link">О 5G</a>
+    <a href="#benefits" class="nav-link">Преимущества</a>
+    <a href="#applications" class="nav-link">Применения</a>
+    <a href="products.html" class="nav-link">Продукты</a>
+    <a href="reviews.html" class="nav-link">Отзывы</a>
+    <a href="support.html" class="nav-link">Тех. поддержка</a>
+    <a href="contact.html" class="nav-link">Контакты</a>
+    <a href="#employees" class="nav-link">Сотрудники</a>
+</nav>
+
+<section id="home">
+    <h2>Главная</h2>
+    <p>Добро пожаловать на сайт, посвященный новым технологиям беспроводной связи, особенно 5G. Узнайте о преимуществах и применении этой революционной технологии.</p>
+</section>
+
+<section id="about">
+    <h2>О 5G</h2>
+    <p>5G — это пятое поколение мобильной связи, обеспечивающее высокую скорость передачи данных, низкую задержку и возможность подключения множества устройств одновременно.</p>
+</section>
+
+<section id="benefits">
+    <h2>Преимущества</h2>
+    <ul>
+        <li>Ультра-высокая скорость передачи данных до 10 Гбит/с.</li>
+        <li>Низкая задержка — менее 1 миллисекунды.</li>
+        <li>Поддержка до 1 миллиона подключенных устройств на квадратный километр.</li>
+        <li>Энергоэффективность и улучшенная производительность сети.</li>
+    </ul>
+</section>
+
+<section id="applications">
+    <h2>Применения</h2>
+    <p>Технология 5G открывает новые горизонты в различных областях, включая:</p>
+    <ul>
+        <li>Автономные автомобили</li>
+        <li>Интернет вещей (IoT)</li>
+        <li>Умные города</li>
+        <li>Телемедицина и удаленное здравоохранение</li>
+        <li>VR и AR приложения</li>
+    </ul>
+</section>
+
+<section id="employees">
+    <h2>Сотрудники</h2>
+    <div class="employee-section">
+        <div class="employee-card">
+            <img src="Олег.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Акишин Олег</div>
+            <div class="employee-position">Генеральный директор</div>
+        </div>
+        <div class="employee-card">
+            <img src="Соня.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Быкова Софья</div>
+            <div class="employee-position">Маркетолог</div>
+        </div>
+        <div class="employee-card">
+            <img src="Колян.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Высоканов Николай</div>
+            <div class="employee-position">Менеджер по продажам</div>
+        </div>
+        <div class="employee-card">
+            <img src="employee4.jpg" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Мадгазин Никита</div>
+            <div class="employee-position">Менеджер по продажам</div>
+        </div>
+        <div class="employee-card">
+            <img src="Дмитрий.jpg" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Кирилюк Дмитрий</div>
+            <div class="employee-position">Технический сотрудник</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Технологии беспроводной связи. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
